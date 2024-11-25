@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+==================================
+Fonts
+==================================
+ */
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-VariableFont_wght.ttf) format(truetype);
+}
+
+/* 
+==================================
+Variables
+==================================
+ */
+:root {
+  --blue-1: rgba(18, 24, 38);
+  --blue-2: #212936;
+  --grey: #9da3ae;
+  --grey-2: #d2d5da;
+  --light-grey: #e5e7eb;
+  --light-blue: #dee9fc;
+  --pink: #fbe5e6;
+  --light-brown: #fceed8;
+  --font-family: "Outfit";
+  --border-radius: 1rem;
+}
+
+body {
+  background-color: var(--blue-1);
+  background-image: url("../images/Background_image@3x.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  display: grid;
+}
+
+img {
+  width: 100%;
+}
+.main {
+  display: grid;
+  justify-self: center;
+  max-width: 1120px;
+  margin: 3rem;
+}
+header {
+  text-align: center;
+  max-width: 25rem;
+  justify-self: center;
+}
+h1 {
+  color: var(--light-grey);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+header p {
+  color: var(--grey);
+}
+.cards-center {
+  margin: 2.5rem 0;
+}
+
+.card,
+img {
+  border-radius: var(--border-radius);
+}
+.card {
+  background: var(--blue-2);
+  padding: 1.5rem 1.75rem;
+  color: var(--grey);
+  margin-bottom: 2rem;
+  max-width: 22rem;
+  justify-self: center;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  background: var(--light-brown);
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.card .title {
+  color: var(--light-grey);
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+.content {
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-center {
+    display: flex;
+    max-width: 736px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: 25rem;
+  }
+
+  img {
+    height: 16rem;
+  }
+
+  .content {
+    padding-right: 2rem;
+  }
+
+  .card:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cards-center {
+    max-width: 1440px;
+  }
+
+  .card {
+    flex: 0 0 calc(33.3333% - 1rem);
+  }
+
+  .card:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
